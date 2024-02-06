@@ -1,0 +1,19 @@
+<div class="container d-flex align-items-center justify-content-center vh-100">
+  <div class="chat-window">
+<div class="chat-window">
+  <div class="message-panel">
+    <!-- Aquí se mostrarán los mensajes -->
+    <div class="message" *ngFor="let item of messageList">
+      {{ item.user }}: {{ item.message }}
+    </div>
+  </div>
+
+  <div class="message-input">
+    
+      <input type="text" placeholder="Escribe tu mensaje" [(ngModel)]="messageInput" />
+      <button type="submit" class="btn btn-primary"  (click)="send()">Enviar</button>
+    
+    
+  </div>
+</div>
+</div>
